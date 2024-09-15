@@ -15,7 +15,7 @@ class LoginPage extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(right: 32, bottom: 40, left: 32),
+          padding: const EdgeInsets.only(right: 32, bottom: 20, left: 32),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -27,16 +27,16 @@ class LoginPage extends StatelessWidget {
                   color: Color.fromRGBO(10, 10, 10, 1),
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(bottom: 183),
-                child: const Text(
-                  'Let’s sign you in',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                    color: Color.fromRGBO(158, 158, 158, 1),
-                  ),
+              const Text(
+                'Let’s sign you in',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  color: Color.fromRGBO(158, 158, 158, 1),
                 ),
+              ),
+              const SizedBox(
+                height: 175,
               ),
               Form(
                 child: Column(
@@ -141,17 +141,15 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(bottom: 40),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: GestureDetector(
                       onTap: () {},
                       child: Container(
                         height: 56,
-                        width: 156.5,
-                        margin: const EdgeInsets.only(right: 16),
                         decoration: const BoxDecoration(
                             color: Color.fromRGBO(237, 237, 237, 1),
                             borderRadius: BorderRadius.all(
@@ -163,11 +161,16 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    GestureDetector(
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: GestureDetector(
                       onTap: () {},
                       child: Container(
                         height: 56,
-                        width: 156.5,
                         decoration: const BoxDecoration(
                             color: Color.fromRGBO(237, 237, 237, 1),
                             borderRadius: BorderRadius.all(
@@ -178,9 +181,12 @@ class LoginPage extends StatelessWidget {
                               Image.asset('lib/ui/assets/images/appleIcon.png'),
                         ),
                       ),
-                    )
-                  ],
-                ),
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 40,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
