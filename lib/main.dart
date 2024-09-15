@@ -1,4 +1,5 @@
 import 'package:authentication/ui/modules/login/login_page.dart';
+import 'package:authentication/ui/modules/onboard/onboard_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,8 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'login',
+      initialRoute: 'onboarding',
       routes: {
+        'onboarding': (context) => const OnboardingPage(),
         'login': (context) => const LoginPage(),
       },
     );
