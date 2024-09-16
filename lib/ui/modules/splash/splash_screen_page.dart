@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class SplashPage extends StatelessWidget {
+  const SplashPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +13,7 @@ class MyApp extends StatelessWidget {
             children: [
               SizedBox(
                 height: 450,
-                child: Image.asset('assets/sammy.png'),
+                child: Image.asset('lib/ui/assets/images/sammy.png'),
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 32, vertical: 32),
