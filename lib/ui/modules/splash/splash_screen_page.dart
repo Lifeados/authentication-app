@@ -6,6 +6,7 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -39,7 +40,7 @@ class SplashPage extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, 'signup');
+                    Navigator.pushNamed(context, 'register');
                   },
                   child: const Text(
                     'Sign Up',
@@ -52,7 +53,7 @@ class SplashPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32),
+                padding: const EdgeInsets.only(left: 32, right: 32, bottom: 24),
                 child: TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, 'login');
