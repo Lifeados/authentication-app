@@ -201,7 +201,9 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, 'register');
+                      },
                       child: const Text(
                         'Sign up',
                         style: TextStyle(
