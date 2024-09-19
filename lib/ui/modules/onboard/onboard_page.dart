@@ -5,26 +5,37 @@ class OnboardingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(
+      const Duration(seconds: 3),
+      () {
+        Navigator.of(context).pushReplacementNamed('splash');
+      },
+    );
     return Scaffold(
       backgroundColor: Colors.red,
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 208, bottom: 480),
-            child: Center(
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              height: 300,
+              alignment: Alignment.bottomCenter,
               child: Image.asset(
                 height: 104,
                 width: 104,
                 'lib/ui/assets/images/splash.png',
               ),
             ),
-          ),
-          const Text('atasmeja.',
+            const Text(
+              'atasmeja.',
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.white,
-              ))
-        ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

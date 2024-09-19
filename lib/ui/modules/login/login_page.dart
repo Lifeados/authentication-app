@@ -6,11 +6,15 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         leading: IconButton(
-          onPressed: () => {},
-          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back_ios_new),
         ),
       ),
       body: SafeArea(

@@ -10,14 +10,17 @@ class RegisterPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(Icons.arrow_back_ios_new),
         ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 32, top: 40, right: 32),
+            padding:
+                const EdgeInsets.only(left: 32, top: 40, right: 32, bottom: 24),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -151,20 +154,29 @@ class RegisterPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('Have an account?'),
-                    TextButton(
-                      onPressed: () {
+                    const Text(
+                      'Have an account? ',
+                      style: TextStyle(
+                        color: Color.fromRGBO(64, 64, 64, 1),
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
                         Navigator.pushNamed(context, 'login');
                       },
                       child: const Text(
                         'Login',
                         style: TextStyle(
-                          color: Colors.red,
+                          color: Color.fromRGBO(249, 86, 77, 1),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
                         ),
                       ),
                     ),
                   ],
-                ),
+                )
               ],
             ),
           ),
