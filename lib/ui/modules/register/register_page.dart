@@ -14,8 +14,8 @@ class RegisterPage extends StatelessWidget {
           icon: const Icon(Icons.arrow_back_ios_new),
         ),
       ),
-      body: SingleChildScrollView(
-        child: SafeArea(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.only(left: 32, top: 40, right: 32),
             child: Column(
@@ -38,6 +38,9 @@ class RegisterPage extends StatelessWidget {
                       ),
                       labelText: 'Name',
                       hintText: 'Type your name',
+                      hintStyle: TextStyle(
+                        color: Color.fromRGBO(158, 158, 158, 1),
+                      ),
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Color.fromRGBO(249, 86, 77, 1),
@@ -66,6 +69,9 @@ class RegisterPage extends StatelessWidget {
                     ),
                     labelText: 'Email',
                     hintText: 'Type your email',
+                    hintStyle: TextStyle(
+                      color: Color.fromRGBO(158, 158, 158, 1),
+                    ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: Color.fromRGBO(249, 86, 77, 1),
@@ -95,6 +101,9 @@ class RegisterPage extends StatelessWidget {
                       ),
                       labelText: 'Password',
                       hintText: 'Type your password',
+                      hintStyle: TextStyle(
+                        color: Color.fromRGBO(158, 158, 158, 1),
+                      ),
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Color.fromRGBO(249, 86, 77, 1),
