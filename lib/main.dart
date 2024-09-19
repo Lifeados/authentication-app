@@ -1,4 +1,5 @@
 import 'package:authentication/ui/modules/login/login_page.dart';
+import 'package:authentication/ui/modules/register/register_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,9 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'login',
+      initialRoute: 'register',
       routes: {
         'login': (context) => const LoginPage(),
+        'register': (context) => const RegisterPage(),
       },
     );
   }
